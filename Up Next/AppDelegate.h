@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <EventKit/EventKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

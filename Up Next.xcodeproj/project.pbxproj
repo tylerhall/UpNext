@@ -12,6 +12,8 @@
 		C690F0DE19CD0C05006F8225 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C690F0DD19CD0C05006F8225 /* Images.xcassets */; };
 		C690F0E119CD0C06006F8225 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C690F0DF19CD0C06006F8225 /* MainMenu.xib */; };
 		C690F0ED19CD0C06006F8225 /* Up_NextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C690F0EC19CD0C06006F8225 /* Up_NextTests.m */; };
+		C690F0F819CD0C39006F8225 /* CalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C690F0F719CD0C39006F8225 /* CalHelper.m */; };
+		C690F0FC19CD0EB9006F8225 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C690F0FB19CD0EB9006F8225 /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 		C690F0E619CD0C06006F8225 /* Up NextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Up NextTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C690F0EB19CD0C06006F8225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C690F0EC19CD0C06006F8225 /* Up_NextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Up_NextTests.m; sourceTree = "<group>"; };
+		C690F0F619CD0C39006F8225 /* CalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalHelper.h; sourceTree = "<group>"; };
+		C690F0F719CD0C39006F8225 /* CalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalHelper.m; sourceTree = "<group>"; };
+		C690F0FB19CD0EB9006F8225 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C690F0FC19CD0EB9006F8225 /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 		C690F0CA19CD0C05006F8225 = {
 			isa = PBXGroup;
 			children = (
+				C690F0FB19CD0EB9006F8225 /* EventKit.framework */,
 				C690F0D519CD0C05006F8225 /* Up Next */,
 				C690F0E919CD0C06006F8225 /* Up NextTests */,
 				C690F0D419CD0C05006F8225 /* Products */,
@@ -78,6 +85,8 @@
 			children = (
 				C690F0DA19CD0C05006F8225 /* AppDelegate.h */,
 				C690F0DB19CD0C05006F8225 /* AppDelegate.m */,
+				C690F0F619CD0C39006F8225 /* CalHelper.h */,
+				C690F0F719CD0C39006F8225 /* CalHelper.m */,
 				C690F0DD19CD0C05006F8225 /* Images.xcassets */,
 				C690F0DF19CD0C06006F8225 /* MainMenu.xib */,
 				C690F0D619CD0C05006F8225 /* Supporting Files */,
@@ -160,6 +169,7 @@
 				TargetAttributes = {
 					C690F0D219CD0C05006F8225 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 3A6K89K388;
 					};
 					C690F0E519CD0C06006F8225 = {
 						CreatedOnToolsVersion = 6.0;
@@ -212,6 +222,7 @@
 			files = (
 				C690F0DC19CD0C05006F8225 /* AppDelegate.m in Sources */,
 				C690F0D919CD0C05006F8225 /* main.m in Sources */,
+				C690F0F819CD0C39006F8225 /* CalHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +336,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Up Next/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -336,9 +349,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Up Next/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -398,6 +413,7 @@
 				C690F0F219CD0C06006F8225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C690F0F319CD0C06006F8225 /* Build configuration list for PBXNativeTarget "Up NextTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +422,7 @@
 				C690F0F519CD0C06006F8225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
